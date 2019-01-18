@@ -43,8 +43,7 @@ int func(char *buf, size_t szbuf, unsigned int x)
 
 		for(it = 0; auxToken[it] != '\0'; it++){
 
-			if(auxToken[it] == '0')
-				continue;
+			if(auxToken[it] == '0') continue;
 
 			if(it == 1 && auxToken[it] == '1' && auxToken[it+1] != '0'){
 				/* LOGICA PARA A DECADA MALDITA (pq tinha q ser diferente? "dez e um", "dez e dois",.. "dez e oito". Mas temos coisas como "ONZE"! VTNC!!) */
@@ -53,40 +52,38 @@ int func(char *buf, size_t szbuf, unsigned int x)
 			}
 
 			switch(auxToken[it]){
-					case '1':
-						if(it == 0 && (auxToken[it+1] != '0' || auxToken[it+2] != '0'))
-							strcat(buf, "cento");
-						else
-							strcat(buf, numeros[0][it]);
-						break;
-					case '2':
-						strcat(buf, numeros[1][it]);
-						break;
-					case '3':
-						strcat(buf, numeros[2][it]);
-						break;
-					case '4':
-						strcat(buf, numeros[3][it]);
-						break;
-					case '5':
-						strcat(buf, numeros[4][it]);
-						break;
-					case '6':
-						strcat(buf, numeros[5][it]);
-						break;
-					case '7':
-						strcat(buf, numeros[6][it]);
-						break;
-					case '8':
-						strcat(buf, numeros[7][it]);
-						break;
-					case '9':
-						strcat(buf, numeros[8][it]);
-						break;
-				}
-				if((it == 0 || it == 1) && (auxToken[it+1] != '0')) strcat(buf, " e ");
-				else                                                strcat(buf, " ");
-
+				case '1':
+					if(it == 0 && (auxToken[it+1] != '0' || auxToken[it+2] != '0')) strcat(buf, "cento");
+					else                                                            strcat(buf, numeros[0][it]);
+					break;
+				case '2':
+					strcat(buf, numeros[1][it]);
+					break;
+				case '3':
+					strcat(buf, numeros[2][it]);
+					break;
+				case '4':
+					strcat(buf, numeros[3][it]);
+					break;
+				case '5':
+					strcat(buf, numeros[4][it]);
+					break;
+				case '6':
+					strcat(buf, numeros[5][it]);
+					break;
+				case '7':
+					strcat(buf, numeros[6][it]);
+					break;
+				case '8':
+					strcat(buf, numeros[7][it]);
+					break;
+				case '9':
+					strcat(buf, numeros[8][it]);
+					break;
+			}
+			if((it == 0 || it == 1) && (auxToken[it+1] != '0')) strcat(buf, " e ");
+			else                                                strcat(buf, " ");
+			
 		}
 
 		if(howMuchTokens >= 0){

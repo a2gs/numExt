@@ -1,5 +1,18 @@
-/* Andre Augusto Giannotti Scota
+/* Andre Augusto Giannotti Scota (a2gs)                              
  * andre.scota@gmail.com
+ *
+ * Write numbers (symbolic numeral) in extensive form (pt_br string) 
+ *
+ * Public Domain
+ *
+ */
+
+/* numExt.c
+ *
+ *  Who     | When       | What
+ *  --------+------------+----------------------------
+ *   a2gs   | 01/10/2017 | Creation
+ *          |            |
  */
 
 #include <stdio.h> 

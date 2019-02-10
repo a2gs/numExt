@@ -1,7 +1,12 @@
+CC = gcc
+CFLAGS = -g -Wall -std=c11 -D_XOPEN_SOURCE=700
+
+RM = rm -rf
+
 all: clean numExt
 
 numExt:
-	cc -o numExt numExt.c -Wall -std=c11
+	$(CC) -o numExt numExt.c $(CFLAGS)
 
 clean:
-	-rm numExt
+	-$(RM) numExt

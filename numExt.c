@@ -3,7 +3,7 @@
  *
  * Write numbers (symbolic numeral) in extensive form (pt_br string) 
  *
- * Public Domain
+ * MIT License
  *
  */
 
